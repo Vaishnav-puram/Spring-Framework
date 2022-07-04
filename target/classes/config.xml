@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+<!-- this is our metadata -->
+
+	<!-- primitive data types -->
+
+	 <!-- first type value as an element -->
+	 <bean class="com.springcore.Student" name="student1">
+ 		<property name="sid">
+ 			<value>23111</value>
+ 		</property>
+ 		<property name="sname" >
+ 			<value>vaishnav</value>
+ 		</property>
+ 		<property name="saddress">
+ 			<value>nizamabad</value>
+ 		</property>
+ 
+ 	</bean>
+ 	<!-- second type value as attribute -->
+ 	<bean class="com.springcore.Student" name="student2" >
+ 		<property name="sid" value="21133"/>
+ 		<property name="sname" value="abhiram"/>
+ 		<property name="saddress" value="hyderabad"/>
+ 	</bean> 
+ 	<!-- third type using p schema to set the values -->
+ 	<bean class="com.springcore.Student" name="student3" p:sid="24555" p:sname="bhargavram" p:saddress="hyderabad"/>
+ 	
+ </beans>
