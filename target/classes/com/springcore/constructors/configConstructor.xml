@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+<!-- this is our metadata -->
+<!-- Constructor type injection -->
+
+	<bean class="com.springcore.constructors.Certi" name="certiref">
+		<constructor-arg value="JAVA for beginners"></constructor-arg>
+	</bean>
+	<!-- you can also write above code as below using c schema -->
+	<!-- <bean class="com.springcore.constructors.Certi" name="certiref" c:name="JAVA for beginners"> -->
+	
+	<bean class="com.springcore.constructors.Person" name="person">
+		<constructor-arg>
+			<value>vaishnav</value>
+		</constructor-arg>
+		
+		<constructor-arg value="23333" type="int"/> <!-- attribute type -->
+		<constructor-arg ref="certiref"></constructor-arg>
+	</bean>
+	
+ </beans>

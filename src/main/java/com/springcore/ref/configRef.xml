@@ -16,5 +16,9 @@
 			<property name="ob">
 				<ref bean="bref"/> <!-- with ref we can inject one's class object into another class's property  -->
 			</property>
+			<!-- <property name="ob" ref="bref"/> you can also write like this as well -->  
+			
+			<!-- summarize as below -->
+			<!-- <bean class="com.springcore.ref.A" name="aref" p:x="150" p:ob-ref="bref"/>-->
 	</bean>
  </beans>
