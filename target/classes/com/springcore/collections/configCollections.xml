@@ -7,7 +7,7 @@
  https://www.springframework.org/schema/beans/spring-beans.xsd">
  
 <!-- this is our metadata -->
-
+<!-- collections type injection -->
 	<bean class="com.springcore.collections.Employee" name="Emp1"> 
 		<property name="name" value="vaishnav"/>
 		

@@ -8,7 +8,7 @@
  
 <!-- this is our metadata -->
 
-	<!-- primitive data types -->
+	<!-- primitive data types injection -->
 
 	 <!-- first type value as an element -->
 	 <bean class="com.springcore.Student" name="student1">
