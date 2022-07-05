@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+<!-- this is our metadata -->
+
+	<bean class="com.springcore.autoWiring1.Address" name="address"> <!-- you have to use same name as the property for using 'byName' -->
+	 	<property name="street" value="Vinayak Nagar"/>
+		 <property name="city" value="Nizamabad"/>
+	</bean>
+	
+	<!-- autoWiring implementation using 'byName' -->
+	<bean class="com.springcore.autoWiring1.Emp" name="emp1" autowire="byName"/>
+	
+	<!-- byName-checks for the name matching with property ,it also calls setter method -->
+	<!-- byType-checks for the type matching with the class name-->
+	<!-- byConstructor-checks for the name matching with property but it also calls constructor  -->
+ </beans>
