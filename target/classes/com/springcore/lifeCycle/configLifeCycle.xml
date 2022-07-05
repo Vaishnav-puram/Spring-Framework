@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ 
+<!-- this is our metadata -->
+     <!-- implementing lifecycle of bean using xml -->
+	<bean class="com.springcore.lifeCycle.bean_1" name="b1" init-method="init" destroy-method="destroy" p:price="20" ></bean>
+	
+	<!-- implementing lifecycle of bean using interfaces -->
+	<bean class="com.springcore.lifeCycle.bean_2" name="b2" p:price="50"></bean>
+	
+	<!-- implementing lifecycle of bean using annotations -->
+	<context:annotation-config/> <!-- it will enable all annotations -->
+	<bean class="com.springcore.lifeCycle.bean_3" name="b3" p:name="vaishnav"></bean>
+	
+	
+	<!-- with the below code it will takecare to enable spcifically postconstruct and predestroy methods -->
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
+ </beans>
